@@ -1,5 +1,5 @@
 {
-  "name": "storybook-test",
+  "name": "storybook-test123",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -9,6 +9,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "storybook-test123": "^0.1.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -20,16 +21,6 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
-  },
-  "babel": {
-    "presets": [
-      [
-        "react-app",
-        {
-          "absoluteRuntime": false
-        }
-      ]
     ]
   },
   "browserslist": {
@@ -47,15 +38,17 @@
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "@storybook/addon-actions": "^6.3.7",
     "@storybook/addon-essentials": "^6.3.7",
     "@storybook/addon-links": "^6.3.7",
     "@storybook/react": "^6.3.7",
     "auto": "^10.31.0",
     "babel-loader": "^8.2.2",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "webpack": "^4.46.0"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/mohamadoudou/storybook-test.git",
   "author": "moctar <moctarm988@gmail.com>",
   "license": "MIT"
