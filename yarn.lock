@@ -9680,19 +9680,6 @@
     "@storybook/core-events" "^6.3.0"
     "ts-dedent" "^2.1.1"
 
-"storybook-test123@^0.1.0":
-  "integrity" "sha512-0jB/8jkcKOE2FmuYjJUCZl7m6EIbplLi4scXh7kfUE+Jo7K6AKzFtDBHKUfwvWW83DPpalUYCEJ6ZBSEJAMe0Q=="
-  "resolved" "https://registry.npmjs.org/storybook-test123/-/storybook-test123-0.1.0.tgz"
-  "version" "0.1.0"
-  dependencies:
-    "@testing-library/jest-dom" "^5.11.4"
-    "@testing-library/react" "^11.1.0"
-    "@testing-library/user-event" "^12.1.10"
-    "prop-types" "^15.7.2"
-    "react" "^17.0.2"
-    "react-dom" "^17.0.2"
-    "web-vitals" "^1.0.1"
-
 "stream-browserify@^2.0.1":
   "integrity" "sha512-nX6hmklHs/gr2FuxYDltq8fJA1GDlxKQCz8O/IM4atRqBH8OORmBNgfvW5gG10GT/qQ9u0CzIvr2X5Pkt6ntqg=="
   "resolved" "https://registry.npmjs.org/stream-browserify/-/stream-browserify-2.0.2.tgz"
