@@ -12,7 +12,6 @@ const CurrencyFormatter = ({
     const [countryIsoCode, currencyCode] = (String(symbol) || "MY,MYR").split(
       ","
     );
-    //const [countryIsoCode, currencyCode] = "MY,MYR".split(",");
     let options = {
       style: "currency",
       currency: currencyCode,
@@ -20,7 +19,7 @@ const CurrencyFormatter = ({
       minimumFractionDigits: minDigits,
       maximumFractionDigits: 2,
     };
-    if (+amount > 1000000) {
+    if (+amount > 10000) {
       options = {
         ...options,
         notation: "compact",
