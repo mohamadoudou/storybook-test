@@ -1,4 +1,4 @@
-import CurrencyFormatter from "../components";
+import CurrencyFormatter from "./index";
 
 export default {
   title: "CurrencyFormatter",

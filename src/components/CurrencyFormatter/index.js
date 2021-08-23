@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { formatAmountWithCurrencySymbol } from "../../utils/string-hepers";
 
 const CurrencyFormatter = ({
   amount = 0,
@@ -6,33 +7,12 @@ const CurrencyFormatter = ({
   defaultLanguage = "en",
   minDigits = 2,
 }) => {
-  // Same as formatPrice except it prepends the passed currency symbol
-  // When price is less than 20,000 show full, otherwise abbreviate
-  const formatAmountWithCurrencySymbol = () => {
-    const [countryIsoCode, currencyCode] = (String(symbol) || "MY,MYR").split(
-      ","
-    );
-    let options = {
-      style: "currency",
-      currency: currencyCode,
-      currencyDisplay: "symbol",
-      minimumFractionDigits: minDigits,
-      maximumFractionDigits: 2,
-    };
-    if (+amount > 10000) {
-      options = {
-        ...options,
-        notation: "compact",
-        compactDisplay: "short",
-      };
-    }
-    return new Intl.NumberFormat(
-      `${defaultLanguage}-${countryIsoCode}`,
-      options
-    ).format(amount);
-  };
-
-  return formatAmountWithCurrencySymbol();
+  return formatAmountWithCurrencySymbol(
+    amount,
+    symbol,
+    defaultLanguage,
+    minDigits
+  );
 };
 
 CurrencyFormatter.propTypes = {
