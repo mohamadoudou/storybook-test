@@ -65,6 +65,7 @@
     "auto": "^10.31.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-react-remove-properties": "^0.3.0",
+    "commitizen": "^4.2.4",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.2",
@@ -88,7 +89,7 @@
   "license": "MIT",
   "config": {
     "commitizen": {
-      "path": "cz-customizable"
+      "path": "cz-conventional-changelog"
     }
   }
 }
