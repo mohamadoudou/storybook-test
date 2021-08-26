@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "cz-customizable": "^6.3.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -16,6 +17,11 @@
     "build-storybook": "build-storybook",
     "build": "cross-env BABEL_ENV=production babel src -d dist",
     "build-lib": "rollup -c"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "husky": {
     "hooks": {
@@ -86,10 +92,5 @@
   "module": "dist/index.es.js",
   "repository": "https://github.com/mohamadoudou/storybook-test.git",
   "author": "moctar <moctarm988@gmail.com>",
-  "license": "MIT",
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  }
+  "license": "MIT"
 }
