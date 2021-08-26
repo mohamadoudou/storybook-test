@@ -1,3 +1,1 @@
-import CurrencyFormatter from "./components";
-
-export default CurrencyFormatter;
+export * from "./components";

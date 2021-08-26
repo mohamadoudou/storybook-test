@@ -1,2 +1,1 @@
-import CurrencyFormatter from "./CurrencyFormatter";
-export default CurrencyFormatter;
+export { default as CurrencyFormatter } from "./CurrencyFormatter";
