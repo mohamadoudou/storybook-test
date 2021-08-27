@@ -12,11 +12,24 @@
     "react-dom": "^17.0.2",
     "web-vitals": "^1.0.1"
   },
-  "scripts": {
+ "scripts": {
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "cross-env BABEL_ENV=production babel src -d dist",
-    "build-lib": "rollup -c"
+    "build-lib": "rollup -c",
+    "test": "node scripts/test.js",
+    "clean:dist": "rm -rf dist",
+    "release": "auto shipit --base-branch=develop",
+    "prebuild": "npm run clean:dist",
+    "publish:dev": "HUSKY_SKIP_HOOKS=1 npm run release -- --prerelease dev && cp ./.env.dev ./.env  && npm publish --tag dev",
+    "publish:staging": "HUSKY_SKIP_HOOKS=1 npm run release -- --prerelease staging && cp ./.env.staging ./.env && npm publish --tag staging",
+    "publish:production": "HUSKY_SKIP_HOOKS=1 npm run release && cp ./.env.prod ./.env && npm publish --tag production",
+		"postpublish:dev": "git push origin develop --follow-tags",
+    "postpublish:staging": "git push origin staging --follow-tags",
+    "postpublish:production": "git push origin master --follow-tags",
+    "prepublishOnly": "npm run clean:dist && npm run build-lib",
+    "lint": "eslint --ignore-path .gitignore src/**/*.{js,jsx}",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier:fix": "prettier --write src/**/*"		
   },
   "config": {
     "commitizen": {
