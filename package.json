@@ -1,6 +1,6 @@
 {
   "name": "storybook-test12",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -12,7 +12,7 @@
     "react-dom": "^17.0.2",
     "web-vitals": "^1.0.1"
   },
- "scripts": {
+  "scripts": {
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-lib": "rollup -c",
@@ -23,13 +23,13 @@
     "publish:dev": "HUSKY_SKIP_HOOKS=1 npm run release && cp ./.env.dev ./.env  && npm publish --tag dev",
     "publish:staging": "HUSKY_SKIP_HOOKS=1 npm run release -- --prerelease staging && cp ./.env.staging ./.env && npm publish --tag staging",
     "publish:production": "HUSKY_SKIP_HOOKS=1 npm run release && cp ./.env.prod ./.env && npm publish --tag production",
-		"postpublish:dev": "git push origin develop --follow-tags",
+    "postpublish:dev": "git push origin develop --follow-tags",
     "postpublish:staging": "git push origin staging --follow-tags",
     "postpublish:production": "git push origin master --follow-tags",
     "prepublishOnly": "npm run clean:dist && npm run build-lib",
     "lint": "eslint --ignore-path .gitignore src/**/*.{js,jsx}",
     "lint:fix": "npm run lint -- --fix",
-    "prettier:fix": "prettier --write src/**/*"		
+    "prettier:fix": "prettier --write src/**/*"
   },
   "config": {
     "commitizen": {
