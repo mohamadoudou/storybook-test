@@ -2,6 +2,21 @@
 
 #### ⚠️ Pushed to `develop`
 
+- feat(work-in-progress): up-2980 remove prerelease (moctarm988@gmail.com)
+- feat(work-in-progress): up-2980 testing script (moctarm988@gmail.com)
+- feat(work-in-progress): up-2980 add prelease ([@mohamadoudou](https://github.com/mohamadoudou))
+
+#### Authors: 2
+
+- [@mohamadoudou](https://github.com/mohamadoudou)
+- moctar (moctarm988@gmail.com)
+
+---
+
+# v0.1.3 (Fri Aug 27 2021)
+
+#### ⚠️ Pushed to `develop`
+
 - feat(work-in-progress): up-2980 add prelease (moctarm988@gmail.com)
 
 #### Authors: 1
