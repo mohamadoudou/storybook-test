@@ -20,7 +20,7 @@
     "clean:dist": "rm -rf dist",
     "release": "auto shipit --base-branch=develop",
     "prebuild": "npm run clean:dist",
-    "publish:dev": "HUSKY_SKIP_HOOKS=1 npm run release -- --prerelease && cp ./.env.dev ./.env  && npm publish --tag dev",
+    "publish:dev": "HUSKY_SKIP_HOOKS=1 npm run release -- --prerelease --tag dev && cp ./.env.dev ./.env  && npm publish --tag dev",
     "publish:staging": "HUSKY_SKIP_HOOKS=1 npm run release -- --prerelease staging && cp ./.env.staging ./.env && npm publish --tag staging",
     "publish:production": "HUSKY_SKIP_HOOKS=1 npm run release && cp ./.env.prod ./.env && npm publish --tag production",
     "postpublish:dev": "git push origin develop --follow-tags",
