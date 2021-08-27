@@ -13,6 +13,9 @@
 /dist
 /storybook-static
 .env
+.env.dev
+.env.staging
+.env.prod
 # misc
 .DS_Store
 .env.local
