@@ -1,3 +1,14 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.1.5-dev.0](https://github.com/mohamadoudou/storybook-test/compare/v0.1.4...v0.1.5-dev.0) (2021-08-28)
+
+
+### Features
+
+* **work-in-progress:** up-2980 change release to standard ([9eab66e](https://github.com/mohamadoudou/storybook-test/commit/9eab66eb0482cb14cd35cffbce3a65e284aab334))
+
 # v0.1.3 (Fri Aug 27 2021)
 
 #### ⚠️ Pushed to `develop`
