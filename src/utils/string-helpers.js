@@ -28,5 +28,5 @@ export const formatAmountWithCurrencySymbol = (
     options
   ).format(amount);
 };
-
+// remove this functions in the future when there is another export function
 export const foo = () => {};
