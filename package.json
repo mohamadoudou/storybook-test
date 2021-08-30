@@ -1,6 +1,6 @@
 {
   "name": "storybook-test12",
-  "version": "0.1.5-dev.1",
+  "version": "0.1.5-staging.0",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
