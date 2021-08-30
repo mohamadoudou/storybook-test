@@ -6,7 +6,9 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "cz-customizable": "^6.3.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -29,19 +31,20 @@
     "prepublishOnly": "npm run clean:dist && npm run build-lib",
     "lint": "eslint --ignore-path .gitignore src/**/*.{js,jsx}",
     "lint:fix": "npm run lint -- --fix",
-    "prettier:fix": "prettier --write src/**/*"
+    "prettier:fix": "prettier --write src/**/*",
+    "prepare": "husky install"
   },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-customizable"
     }
   },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
+  "jira-prepare-commit-msg": {
+    "messagePattern": "[$J]\n$M",
+    "jiraTicketPattern": "([A-Z]+-\\d+)",
+    "commentChar": "#",
+    "isConventionalCommit": false,
+    "allowEmptyCommitMessage": false
   },
   "lint-staged": {
     "src/**/*.{js,jsx,scss,css,mdx}": [
@@ -49,12 +52,6 @@
     ],
     "src/**/*.{js,jsx}": [
       "eslint --fix"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
     ]
   },
   "browserslist": {
@@ -87,9 +84,16 @@
     "commitizen": "^4.2.4",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^7.0.2",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.25.1",
+    "husky": "^7.0.0",
+    "jira-prepare-commit-msg": "^1.6.1",
     "lint-staged": "^11.1.2",
-    "prettier": "^2.3.2",
+    "prettier": "2.3.2",
     "rollup": "^2.56.3",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
