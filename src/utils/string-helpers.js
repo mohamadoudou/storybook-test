@@ -1,4 +1,5 @@
 // When price is less than 20,000 show full, otherwise abbreviate
+// test
 export const formatAmountWithCurrencySymbol = (
   amount = 0,
   symbol = "MY,MYR",
@@ -27,3 +28,5 @@ export const formatAmountWithCurrencySymbol = (
     options
   ).format(amount);
 };
+
+export const foo = () => {};
